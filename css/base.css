@@ -1,0 +1,58 @@
+/* === base.css === */
+/* 样式、变量 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background: #f8fafc;
+    min-height: 100vh;
+    color: #334155;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 状态提示 */
+.state-container {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.state-icon {
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+.state-title {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.state-message {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* 辅助功能：视觉隐藏但屏幕阅读器可读 */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* 确保父元素有相对定位，避免label位置问题 */
+.search-container {
+    position: relative;
+}

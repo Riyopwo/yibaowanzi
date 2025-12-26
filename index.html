@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>一包丸子自助厅</title>
+
+    <!-- ========== Favicon（更新路径）========== -->
+    <!-- 基础ICO格式（兼容旧浏览器） -->
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+
+    <!-- 标准PNG格式（现代浏览器） -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+
+    <!-- Apple设备 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+
+    <!-- Android设备 -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
+
+    <!-- PWA支持 -->
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- 主题颜色 -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ========== CSS文件（新增）========== -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- ========== 安全头部（保持不变）========== -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data: https:;
+               connect-src 'self';
+               font-src 'self';
+               frame-ancestors 'none';
+               form-action 'self'">
+<!-- Referrer策略（正确写法） -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- 防止搜索引擎索引 -->
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div class="main-card">
+        <div class="content-card search-card">
+            <div class="title-section">
+                <!-- 这里使用img标签而不是background，保持原功能 -->
+                <img src="assets/images/logo.png" class="main-icon" alt="查询工具">
+            </div>
+
+            <div class="search-section">
+                <div class="search-container">
+                    <label for="keywordInput" class="visually-hidden">搜索关键词</label>
+                    <div class="search-bar">
+                        <input type="text" id="keywordInput" placeholder="请输入关键词嗷~(*╹▽╹*)">
+                        <button id="searchButton" title="搜索">
+                            <img src="assets/images/search.png" alt="搜索"
+                                 style="width: 24px; height: 24px; margin-left: -15px;">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="search-tips">
+                    <p><span>💡</span> 请确保关键词是文末的关键词哦~</p>
+                    <p><span>😘</span> 遇到任何问题可以在公众号里给丸子留言(..›ᴗ‹..)</p>
+                    <p><span>✨</span> 该站仅微信公众号 一包丸子 辅助用哒~并不适用于所有公众号啊喂！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 结果卡片 -->
+        <div class="content-card result-card">
+            <div class="result-header">
+                <div class="back-button" id="backButton" aria-label="返回搜索">
+                    <img src="assets/images/goback.png" alt="返回" class="back-icon">
+                </div>
+                <div class="result-title">
+                    <h2 id="resultKeyword">查询结果</h2>
+                    <p id="resultStatus">请输入关键词开始搜索</p>
+                </div>
+            </div>
+
+            <div id="resultsContainer" class="results-grid">
+                <!-- 结果将动态插入到这里 -->
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer-card">
+            <p> 💙 预祝各位看文愉快，生活开心~(*^▽^*) 💙 </p>
+        </div>
+    </div>
+
+    <!-- ========== JavaScript文件（新增）========== -->
+    <script src="js/utils.js" defer></script>
+    <script src="js/validator.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
