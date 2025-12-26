@@ -1,5 +1,4 @@
 /* === components.css === */
-/* 只做分离，不做任何修改！ */
 /* 搜索卡片 */
 .search-card {
     text-align: center;
@@ -470,5 +469,79 @@ datalist option {
     #searchButton:focus-visible {
         background: transparent !important;
         -webkit-tap-highlight-color: transparent !important;
+    }
+        .resource-card {
+        padding: 20px !important;
+        margin-bottom: 15px;
+    }
+
+    .card-header {
+        margin-bottom: 20px !important;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* ========== 移动端：替换emoji为自定义图标 ========== */
+    .card-icon {
+        display: none !important; /* 隐藏电脑端的emoji背景图标 */
+    }
+
+    /* 添加移动端专属图标 */
+    .card-title::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        vertical-align: middle;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .txt-card .card-title::before {
+        background-image: url('../assets/images/txtbook.png');
+    }
+
+    .epub-card .card-title::before {
+        background-image: url('../assets/images/epubbook.png');
+    }
+
+    /* ========== 移动端：缩小标题文字 ========== */
+    .card-title h3 {
+        font-size: 1.3rem !important; /* 原来是1.6rem */
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 8px;
+    }
+
+    /* ========== 移动端：调整提取码样式 ========== */
+    .code-tag {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+    /* ========== 移动端：调整地址区域 ========== */
+    .address-area {
+        padding: 18px;
+        margin-top: 15px;
+    }
+
+    .address-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .copy-button {
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    /* ========== 移动端：调整网格布局 ========== */
+    .results-grid {
+        gap: 15px;
     }
 }
