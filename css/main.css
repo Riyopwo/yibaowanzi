@@ -1,14 +1,8 @@
 /* === main.css === */
 /* 导入其他CSS文件 */
-@import 'fonts.css';
 @import 'base.css';
 @import 'layout.css';
 @import 'components.css';
-
-/* 全局字体设置 */
-body {
-    font-family: var(--font-xiangcui);
-}
 
 /* 这里可以添加一些全局样式（如果有的话） */
 /* 注意：原代码中没有额外的全局样式，所以这里留空 */
