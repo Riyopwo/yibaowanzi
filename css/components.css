@@ -390,7 +390,6 @@ datalist option {
 
 /* 复制按钮 */
 .copy-button {
-	font-family: var(--font-xiangcui);
     background: #3b82f6;
     color: white;
     border: none;
