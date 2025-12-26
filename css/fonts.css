@@ -1,0 +1,15 @@
+/* === fonts.css === */
+@font-face {
+    font-family: 'XiangcuiDengcusong';
+    src: url('../assets/fonts/XiangcuiDengcusong.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+
+}
+
+/* 字体备用方案 */
+:root {
+    --font-xiangcui: 'XiangcuiDengcusong', -apple-system, BlinkMacSystemFont,
+                     'Segoe UI', 'Microsoft YaHei', 'STXihei', serif;
+}
